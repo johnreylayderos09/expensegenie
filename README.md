@@ -1,12 +1,23 @@
-# React + Vite
+Expense Genie
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Expense Genie is a user-friendly web application designed to help you manage your expenses effectively. It offers features like AI advising, spending insights, and budget planning to give you better control over your finances.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+AI Adviser: Get smart recommendations on managing your expenses.
 
-## Expanding the ESLint configuration
+Spending Insights: Visualize and analyze your spending habits.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Budget Planning: Plan and track your monthly budgets easily.
+
+Responsive Design: Works smoothly on desktops, tablets, and phones.
+
+Tech Stack
+
+React.js with Tailwind CSS for the frontend
+
+Swiper.js for the feature carousel
+
+Backend (Node.js/Express or Supabase) (customize based on your backend)
+
+Git for version control
