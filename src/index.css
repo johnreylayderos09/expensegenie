@@ -1,0 +1,12 @@
+
+@import "tailwindcss";
+
+@media (max-width: 768px) {
+  .custom-swiper .swiper-button-next,
+  .custom-swiper .swiper-button-prev {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
