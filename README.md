@@ -1,12 +1,33 @@
-# React + Vite
+# Expense Genie
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Expense Genie is a modern, user-friendly web application designed to help you take full control of your personal finances. By combining advanced AI-powered advice, insightful spending analysis, and practical budget planning, Expense Genie empowers you to manage your money smarter and achieve your financial goals.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## Expanding the ESLint configuration
+### 🤖 AI Adviser
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Get personalized financial recommendations based on your unique spending patterns. The AI Adviser helps you optimize your budget, reduce unnecessary expenses, and make smarter financial decisions.
+
+### 📊 Spending Insights
+
+Visualize your spending with interactive charts and summaries that reveal where your money goes. Understand your habits, identify spending trends, and discover opportunities to save more.
+
+### 📅 Budget Planning
+
+Create and manage monthly budgets for different categories. Track your progress in real-time and receive alerts to stay on target and avoid overspending.
+
+### 📱 Responsive Design
+
+Fully responsive layout that works flawlessly across all devices — from desktops to tablets and smartphones — ensuring you have access anytime, anywhere.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js + Tailwind CSS  
+- **Carousel:** Swiper.js for smooth and interactive slideshows  
+- **Backend:** Node.js/Express or Supabase for APIs and database management  
+- **Routing:** React Router for seamless navigation  
+- **Version Control:** Git and GitHub for collaboration and code management  
