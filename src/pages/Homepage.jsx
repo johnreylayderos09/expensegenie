@@ -1,15 +1,19 @@
 // src/pages/Homepage.js
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper/modules";
-import { Card, CardContent } from "../components/ui/card";
-import { Button } from "../components/ui/button";
-
-// ✅ Import recharts components
+import {
+  React,
+  useEffect,
+  useState,
+  NavLink,
+  Swiper,
+  SwiperSlide,
+  Pagination,
+  Navigation,
+  Card,
+  CardContent,
+  Button,
+  supabase,
+  SupabaseClient
+} from '../imports';
 import {
   ResponsiveContainer,
   BarChart,
@@ -19,11 +23,31 @@ import {
   Tooltip,
 } from "recharts";
 
+
 export default function Homepage() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Dummy Data
-  const userName = "Chibby"; // Replace with real user data
+ const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    const getUser = async () => {
+      const result = await supabase.auth.getUser();
+
+      if (result.error) {
+        console.error("Error fetching user:", result.error.message);
+        return;
+      }
+
+      if (result.data.user) {
+        const displayName = result.data.user.user_metadata?.full_name || result.data.user.user_metadata?.name || result.data.user.email;
+        setUserName(displayName);
+      }
+    };
+
+    getUser();
+  }, []);
+
+
   const stats = [
     { title: "💸 Spent this month", value: "₱12,500" },
     { title: "📊 Budget progress", value: "70% used" },
@@ -40,7 +64,7 @@ export default function Homepage() {
   const spendingData = [
     { category: "Food", amount: 5000 },
     { category: "Transport", amount: 1500 },
-    { category: "Entertainment", amount: 2000 },
+    { category: "Leisure", amount: 2000 },
     { category: "Shopping", amount: 4000 },
   ];
 
@@ -135,7 +159,7 @@ export default function Homepage() {
       {/* Hero Section */}
       <section className="p-6 text-center">
         <h1 className="text-2xl font-bold text-gray-800 mb-6">
-          Welcome back, {userName} 👋
+           Welcome back, {userName || "Guest"} 👋
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {stats.map((s, i) => (
@@ -193,7 +217,7 @@ export default function Homepage() {
                     <img
                       src={f.img}
                       alt={f.title}
-                      className="w-150 h-50 object-contain gap-1.5"
+                      className="w-120 h-37 object-contain gap-1.5"
                     />
                   </div>
                   <div className="flex flex-col items-center pb-4 gap-1.5"></div>

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { supabase } from "../supabaseClient"; // adjust the path if needed
+// src/pages/Signup.jsx
+import{
+React, useState, Link, supabase
+} from "../imports";
 
 export default function Signup() {
   const [fullName, setFullName] = useState("");
@@ -121,6 +122,8 @@ export default function Signup() {
             disabled={!canSubmit || loading}
           >
             {loading ? "Signing Up..." : "Sign Up"}
+            <Link to="/login">
+            </Link>
           </button>
         </form>
 
